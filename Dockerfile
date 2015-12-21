@@ -11,8 +11,10 @@ RUN apt-get update && \
 
 RUN pip install --upgrade pip
 
+RUN pip install urwid requests
+
 ADD . /tmp/menu
 
 RUN cd /tmp/menu && pip install -e .
 
-CMD /usr/local/bin/cif-menu.py
+CMD /usr/local/bin/cif-fetchconfig.py

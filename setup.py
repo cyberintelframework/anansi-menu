@@ -10,7 +10,8 @@ install_requires = [
 
 
 scripts = [
-    'scripts/cif-menu.py'
+    'scripts/cif-menu.py',
+    'scripts/cif-fetchconfig.py',
 ]
 
 
