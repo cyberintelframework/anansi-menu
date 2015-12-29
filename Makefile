@@ -2,12 +2,12 @@ DOCKER_REPO=gijzelaerr/cif-menu
 
 .PHONY: build clean
 
-all: run
+all: build run
 
 build:
 	docker build --pull -t ${DOCKER_REPO} .
 
-run: build
+run:
 	docker run -ti \
 		-e SENSOR_URL=${SENSOR_URL} \
 		-e SENSOR_USERNAME=${SENSOR_USERNAME} \

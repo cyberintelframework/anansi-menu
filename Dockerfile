@@ -4,17 +4,16 @@ MAINTAINER gijsmolenaar@gmail.com
 
 RUN apt-get update && \
     apt-get install -y \
-        python-pip \
+        python3-pip \
+        python3-dialog \
+        python3-requests \
         openvpn \
+        dialog \
         && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN pip install --upgrade pip
+ADD . /menu
 
-RUN pip install urwid requests
+RUN cd /menu && python3 setup.py install
 
-ADD . /tmp/menu
-
-RUN cd /tmp/menu && pip install -e .
-
-CMD /usr/local/bin/cif-fetchconfig.py
+CMD /usr/local/bin/cif-menu.py

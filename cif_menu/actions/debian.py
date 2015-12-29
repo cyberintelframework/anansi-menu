@@ -3,6 +3,7 @@ from collections import namedtuple
 import requests
 import logging
 
+from distlib import database
 
 DEFAULT_URL = "https://vpn.tuxed.net/vpn-user-portal/new"
 DEFAULT_USERNAME = "foo"
@@ -38,6 +39,7 @@ def fetch_openvpn_config(config):
     logger.info("retrieving config from %s with username %s password %s..." % (config.url,
                                                                                config.username,
                                                                                '*' * len(config.password)))
-    r = requests.get(config.url, auth=(config.username, config.password))
+    r = requests.post(config.url, auth=(config.username, config.password), data={'name': config.name})
     if r.status_code != 200:
-        raise requests.exceptions.RequestException(str(r.status_code))
+        raise requests.exceptions.RequestException(str(r.status_code) + r.text)
+    return r.text
