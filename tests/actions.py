@@ -1,36 +1,36 @@
 import unittest
 import os
 import requests
-from anansi_menu.actions import debian
 
+import anansi_menu.actions
 
 
 def cleanup_env():
     """make sure no env vars are set"""
-    for e in debian.ALL_ENV:
+    for e in anansi_menu.actions.ALL_ENV:
         if e in os.environ:
             del os.environ[e]
 
 
 class TestCleanup(unittest.TestCase):
     def test_cleanup(self):
-        for e in debian.ALL_ENV:
+        for e in anansi_menu.actions.ALL_ENV:
             os.environ[e] = "test_cleanup"
         cleanup_env()
-        for e in debian.ALL_ENV:
+        for e in anansi_menu.actions.ALL_ENV:
             self.assertFalse(e in os.environ)
 
 
-class TestDebian(unittest.TestCase):
+class TestActions(unittest.TestCase):
     def setUp(self):
         cleanup_env()
 
     def testGetConfig(self):
-        config = debian.get_config()
-        self.assertEqual(config.url, debian.DEFAULT_URL)
-        self.assertEqual(config.name, debian.DEFAULT_NAME)
-        self.assertEqual(config.username, debian.DEFAULT_USERNAME)
-        self.assertEqual(config.password, debian.DEFAULT_PASSWORD)
+        config = anansi_menu.actions.get_config()
+        self.assertEqual(config.url, anansi_menu.actions.DEFAULT_URL)
+        self.assertEqual(config.name, anansi_menu.actions.DEFAULT_NAME)
+        self.assertEqual(config.username, anansi_menu.actions.DEFAULT_USERNAME)
+        self.assertEqual(config.password, anansi_menu.actions.DEFAULT_PASSWORD)
 
     def testGetConfigWithEnv(self):
         custom_url = 'http://custom_url'
@@ -43,7 +43,7 @@ class TestDebian(unittest.TestCase):
         os.environ['SENSOR_PASSWORD'] = custom_password
         os.environ['SENSOR_NAME'] = custom_name
 
-        config = debian.get_config()
+        config = anansi_menu.actions.get_config()
 
         self.assertEqual(config.url, custom_url)
         self.assertEqual(config.name, custom_name)
@@ -51,10 +51,10 @@ class TestDebian(unittest.TestCase):
         self.assertEqual(config.password, custom_password)
 
     def testGetOpenVpnConfig(self):
-        config = debian.get_config()
+        config = anansi_menu.actions.get_config()
 
         # should not work with default settings
-        self.assertRaises(requests.exceptions.RequestException, debian.fetch_openvpn_config, config)
+        self.assertRaises(requests.exceptions.RequestException, anansi_menu.actions.fetch_openvpn_config, config)
 
 
 if __name__ == '__main__':
