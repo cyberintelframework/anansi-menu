@@ -1,7 +1,7 @@
 import unittest
 import os
 import requests
-from cif_menu.actions import debian
+from anansi_menu.actions import debian
 
 
 

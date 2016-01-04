@@ -1,8 +1,9 @@
 
-CIF menu
+Anansi menu
 ========
 
-This is the configuration frontend for the CIF sensor probe. It should be installed inside the sensor.
+This is the configuration frontend for the Anansi sensor probe. It should be
+installed inside the sensor.
 
 
 Assumes root privileges.
@@ -28,8 +29,8 @@ Customization
 
 You can manipulate the default config variables by setting these environment variables:
 
- * **DEFAULT_GEN_URL** - URL used for generating a configuration
- * **DEFAULT_FETCH_URL** - URL for fetching openvpn configuration
- * **DEFAULT_USERNAME** - username used for URL authentication
- * **DEFAULT_PASSWORD** - password used for URL authentication
- * **DEFAULT_NAME** - name of the probe
+ * **SENSOR_URL** - URL used for generating a configuration
+ * **SENSOR_USERNAME** - username used for URL authentication
+ * **SENSOR_PASSWORD** - password used for URL authentication
+ * **SENSOR_NAME** - name of the probe
+

@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 import os
 import logging
-from cif_menu.actions.debian import fetch_openvpn_config, get_config
+from anansi_menu.actions.debian import fetch_openvpn_config, get_config
 
 
 logger = logging.getLogger(__name__)

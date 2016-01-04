@@ -10,13 +10,13 @@ install_requires = [
 
 
 scripts = [
-    'scripts/cif-menu.py',
-    'scripts/cif-fetchconfig.py',
+    'scripts/anansi-menu.py',
+    'scripts/anansi-fetchconfig.py',
 ]
 
 
 setup(
-    name="cif_menu",
+    name="anansi_menu",
     version="0.1",
     packages=find_packages(),
     install_requires=install_requires,

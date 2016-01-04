@@ -1,4 +1,4 @@
-DOCKER_REPO=gijzelaerr/cif-menu
+DOCKER_REPO=anansi/menu
 
 .PHONY: build clean
 

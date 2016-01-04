@@ -14,6 +14,6 @@ RUN apt-get update && \
 
 ADD . /menu
 
-RUN cd /menu && python3 setup.py install
+RUN cd /menu && pip3 install .
 
-CMD /usr/local/bin/cif-menu.py
+CMD /usr/local/bin/anansi-menu.py
