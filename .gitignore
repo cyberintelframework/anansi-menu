@@ -1,4 +1,4 @@
 README.html
 *.pyc
-
-
+anansi_menu.egg-info/
+dist/
