@@ -7,6 +7,6 @@ Standards-Version: 3.9.1
 
 Package: python3-anansi-menu
 Architecture: all
-Depends: ${misc:Depends}, python3-dialog, python3-request
+Depends: python3-dialog, python3-requests
 Description: anansi menu
 
