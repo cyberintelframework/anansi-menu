@@ -8,14 +8,15 @@ addons:
     - debhelper
     - build-essential
 install:
-- pip install .
+  - pip install .
 script:
-- nosetests
+  - nosetests
 after_success:
-- dpkg-buildpackage
+  - dpkg-buildpackage
+  - mv ../*.deb .
 deploy:
   provider: bintray
   file: descriptor.json
   user: gijzelaerr
   key:
-    secure: n7ASgU/jOfdUKoNsFgJyTRxgGfF8Y6oVsMW2YmrEFuIK6/LPiaTNOlqisUSmC0YA8Sg1Q6bREKWb+N1UT9MxU7uTFjALKwC/LakFuFDzlY/fYsdusLtpIpoqGSCC2NEX2nEUxJ9qBLbOuOlQNn4vDMLJWno/ixpBeXJkTjH2U/7zRwqoa9iZtZFJZYcwq5iR2leh6nRNyGFzDrtGilJxjumOoIwP09PGqhCeHNxR2wud4bx+TXZeecYPSwt6zczsVnEa12WhBe861GfyQalhZ/kOud9vV5Dmx++Uuytb/mQhfAKgrd6EcYDoHfTgmjgIoGOhGu3qH0sDx4+41jl9HW3TmnN4X/x8+Vq+a/819R5YaJNUs/s4V+wCLuUaXfY5/mW8OXM4IpJitm2DB5yd2fRBNqju14kpd8pRzwl++x8DZvmqQFvkeOjbvfJXuuWRfTGcz0zZz0jyFTunjo8I8b+EqdvP1aG2zkw2uwriPUloKW1QJ21RI4d6TBGzwSAC3oE4kWiAxcKzJ3h9NqsK8Y3CRIgmW38KhUNOiGGaeA4R72khhoprTEuTCquwaKctRI082Gw/JQ4//5GfY5OsGT9rXVLoJ6K+Fv0XSeOPjBdwWiL8efjbFCL0R51JkWWzOp5TUWzf4BeYBJa8ZiIFQWzGfLGZtr7ZkKZ9u3xZ8+c=
+    secure: or71RwHHnymKhZeoxATCyZq/iorV14Uv6Rwomkf4x2yj2QWgsMCNNsRfmjiEu8dmZmDH9gyjPdebNfdg6VEZqsNbNBWlvCD81lKBFqaEO3IBKhEwDOcJtHFHmJGIJWvN5jnwKa8usX56pQF5gEbFkg9X+RFwHDpd7OUIJfYweUfG2P68DlKxwWhakDTqYi+MUO/l5GKE+mkgupPsgafYabu9O/cVGkutZCwy6WJi0UGg7Fnanas9q986927zzFjTPpx2IZW14URsSnrXilqaVEyoBF8Hs2gG4gzCIEb00Q3/WrNZMYtX19/OnB+7i6JFes9kdCafD+N3Hewm5KtP+wM5or7HVZrff2DrgxS+jcnR4zYYL8elVMy7nuQeeSoLVoWcm+k+Dd6lDIbZJPyOXkZ4hftS1xgnLgXbdoRo2ag7VAZU8AtBhhzIjSAv1HgffE8FNHsCUx3vUQdb+sKdZMuuqIlT175n8T9X/txzqMIFqdCChStrTLJq60V/PdnIRHHKWsAwXoun8wuEWPN0ttHRJAApmi2q43E4MkeQd7TyZXyhNBd2WHIcAWdd3C779EImrZKRm/gnfteQCP8AstGR9BC5Jn/mO1XDP4mR1EkAG6BmJ1lpWWyGtWK12U7DeVbnpqnRzq0auBIOKf/GbskHf91jqQgn0bRE/IatWq8=
