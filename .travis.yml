@@ -1,5 +1,5 @@
 language: generic
-sudo: false
+sudo: true
 dist: trusty
 addons:
   apt:
@@ -9,6 +9,9 @@ addons:
     - python3-pip
     - debhelper
     - build-essential
+before_install:
+ - apt-get update
+ - apt-get install -y python3-setuptools python3-all python3-pip debhelper build-essential python3-pip
 install:
   - pip3 install .
 script:
