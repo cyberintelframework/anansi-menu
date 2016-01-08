@@ -3,17 +3,19 @@ python: 3.4
 addons:
   apt:
     packages:
-      - python3-setuptools
-      - python3-all
-      - debhelper
-      - build-essential
+    - python3-setuptools
+    - python3-all
+    - debhelper
+    - build-essential
 install:
-  - pip install .
+- pip install .
 script:
-  - nosetests
+- nosetests
 after_success:
-  - dpkg-buildpackage
+- dpkg-buildpackage
 deploy:
   provider: bintray
-  file: ../python3-anansi-menu_0.1_all.deb
-  user: gijzelaerrtb
+  file: "../python3-anansi-menu_0.1_all.deb"
+  user: gijzelaerr
+  key:
+    secure: n7ASgU/jOfdUKoNsFgJyTRxgGfF8Y6oVsMW2YmrEFuIK6/LPiaTNOlqisUSmC0YA8Sg1Q6bREKWb+N1UT9MxU7uTFjALKwC/LakFuFDzlY/fYsdusLtpIpoqGSCC2NEX2nEUxJ9qBLbOuOlQNn4vDMLJWno/ixpBeXJkTjH2U/7zRwqoa9iZtZFJZYcwq5iR2leh6nRNyGFzDrtGilJxjumOoIwP09PGqhCeHNxR2wud4bx+TXZeecYPSwt6zczsVnEa12WhBe861GfyQalhZ/kOud9vV5Dmx++Uuytb/mQhfAKgrd6EcYDoHfTgmjgIoGOhGu3qH0sDx4+41jl9HW3TmnN4X/x8+Vq+a/819R5YaJNUs/s4V+wCLuUaXfY5/mW8OXM4IpJitm2DB5yd2fRBNqju14kpd8pRzwl++x8DZvmqQFvkeOjbvfJXuuWRfTGcz0zZz0jyFTunjo8I8b+EqdvP1aG2zkw2uwriPUloKW1QJ21RI4d6TBGzwSAC3oE4kWiAxcKzJ3h9NqsK8Y3CRIgmW38KhUNOiGGaeA4R72khhoprTEuTCquwaKctRI082Gw/JQ4//5GfY5OsGT9rXVLoJ6K+Fv0XSeOPjBdwWiL8efjbFCL0R51JkWWzOp5TUWzf4BeYBJa8ZiIFQWzGfLGZtr7ZkKZ9u3xZ8+c=
