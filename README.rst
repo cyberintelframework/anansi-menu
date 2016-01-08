@@ -34,3 +34,9 @@ You can manipulate the default config variables by setting these environment var
  * **SENSOR_PASSWORD** - password used for URL authentication
  * **SENSOR_NAME** - name of the probe
 
+
+travis
+------
+
+.. image:: https://travis-ci.org/cyberintelframework/anansi-menu.svg
+    :target: https://travis-ci.org/cyberintelframework/anansi-menu

@@ -1,0 +1,19 @@
+language: python
+python: 3.4
+addons:
+  apt:
+    packages:
+      - python3-setuptools
+      - python3-all
+      - debhelper
+      - build-essential
+install:
+  - pip install .
+script:
+  - nosetests
+after_success:
+  - dpkg-buildpackage
+deploy:
+  provider: bintray
+  file: ../python3-anansi-menu_0.1_all.deb
+  user: gijzelaerrtb
