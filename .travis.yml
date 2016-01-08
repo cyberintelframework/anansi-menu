@@ -10,15 +10,14 @@ addons:
     - debhelper
     - build-essential
 before_install:
- - apt-get update
- - apt-get install -y python3-setuptools python3-all python3-pip debhelper build-essential python3-pip
+ - sudo apt-get update
+ - sudo apt-get install -y python3-setuptools python3-all python3-pip debhelper build-essential python3-pip
 install:
-  - pip3 install .
+  - sudo pip3 install .
 script:
   - nosetests
 after_success:
   - dpkg-buildpackage
-  - mv ../*.deb .
 deploy:
   provider: bintray
   file: descriptor.json
