@@ -1,0 +1,23 @@
+{
+    "package": {
+        "name": "anansi-menu",
+        "repo": "anansi",
+        "subject": "anansi"
+    },
+
+    "version": {
+        "name": "0.5",
+        "desc": "This is a version",
+        "released": "2015-01-04",
+        "vcs_tag": "0.5"
+    },
+    "files":
+    [{"includePattern": "../(.*\.deb)", "uploadPattern": "$1",
+        "matrixParams": {
+            "deb_distribution": "stable",
+            "deb_component": "main",
+            "deb_architecture": "amd64"}
+    }
+    ],
+    "publish": true
+}
