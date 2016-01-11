@@ -23,7 +23,6 @@ Installation
     $ pip install .
 
 
-
 Customization
 -------------
 
@@ -33,6 +32,16 @@ You can manipulate the default config variables by setting these environment var
  * **SENSOR_USERNAME** - username used for URL authentication
  * **SENSOR_PASSWORD** - password used for URL authentication
  * **SENSOR_NAME** - name of the probe
+
+
+Release procedure
+-----------------
+
+We use travis to publish debian binaries on bintray.
+
+https://bintray.com/anansi/anansi/anansi-menu/
+
+developer note: Make sure the version number is correct in setup.py, descriptor.json and debian/changelog
 
 
 travis
