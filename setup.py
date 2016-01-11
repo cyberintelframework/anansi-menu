@@ -17,7 +17,7 @@ scripts = [
 
 setup(
     name="anansi_menu",
-    version="0.10",
+    version="0.11",
     packages=find_packages(),
     install_requires=install_requires,
     scripts=scripts,
