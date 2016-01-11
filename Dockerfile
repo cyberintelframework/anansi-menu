@@ -4,9 +4,9 @@ MAINTAINER gijsmolenaar@gmail.com
 
 RUN apt-get update && \
     apt-get install -y \
-        python3-pip \
-        python3-dialog \
-        python3-requests \
+        python-pip \
+        python-dialog \
+        python-requests \
         openvpn \
         dialog \
         && \
@@ -14,6 +14,6 @@ RUN apt-get update && \
 
 ADD . /menu
 
-RUN cd /menu && pip3 install .
+RUN cd /menu && pip install .
 
 CMD /usr/local/bin/anansi-menu.py
