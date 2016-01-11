@@ -13,6 +13,7 @@ before_install:
 install:
 - sudo pip install .
 script:
+- export
 - nosetests
 after_success:
 - dpkg-buildpackage
