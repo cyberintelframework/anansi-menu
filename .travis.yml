@@ -1,5 +1,5 @@
-language: python
-sudo: false
+language: generic
+sudo: true
 dist: trusty
 addons:
   apt:
@@ -8,6 +8,8 @@ addons:
     - build-essential
     - dh-virtualenv
     - dialog
+before_install:
+  - sudo apt-get install debhelper build-essential dh-virtualenv dialog python-nose
 install:
   - pip install .
 script:
