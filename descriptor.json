@@ -6,13 +6,13 @@
     },
 
     "version": {
-        "name": "0.5",
+        "name": "0.6",
         "desc": "This is a version",
-        "released": "2015-01-04",
-        "vcs_tag": "0.5"
+        "released": "2016-01-04",
+        "vcs_tag": "0.6"
     },
     "files":
-    [{"includePattern": "(../.*\.deb)", "uploadPattern": "$1",
+    [{"includePattern": "(../python-anansi-menu_.*\.deb)", "uploadPattern": "$1",
         "matrixParams": {
             "deb_distribution": "stable",
             "deb_component": "main",
