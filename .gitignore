@@ -4,8 +4,6 @@ anansi_menu.egg-info/
 dist/
 build/
 debian/files
-debian/python3-anansi-menu.debhelper.log
-debian/python3-anansi-menu.postinst.debhelper
-debian/python3-anansi-menu.prerm.debhelper
-debian/python3-anansi-menu.substvars
-debian/python3-anansi-menu/
+debian/python-anansi-menu.debhelper.log
+debian/python-anansi-menu.substvars
+debian/python-anansi-menu/

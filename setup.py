@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 
 install_requires = [
-    'python2-dialog',
+    'python2-pythondialog',
     'requests',
 ]
 

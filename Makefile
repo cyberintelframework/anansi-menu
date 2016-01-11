@@ -16,4 +16,4 @@ run:
 		${DOCKER_REPO}
 
 clean:
-	docker rmi ${DOCKER_REPO}
+	docker rmi ${DOCKER_REPO} || true
