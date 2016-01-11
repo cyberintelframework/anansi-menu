@@ -5,8 +5,6 @@ MAINTAINER gijsmolenaar@gmail.com
 RUN apt-get update && \
     apt-get install -y \
         python-pip \
-        python-dialog \
-        python-requests \
         openvpn \
         dialog \
         && \

@@ -5,7 +5,7 @@ DOCKER_REPO=anansi/menu
 all: build run
 
 build:
-	docker build --pull -t ${DOCKER_REPO} .
+	docker build -t ${DOCKER_REPO} .
 
 run:
 	docker run -ti \
