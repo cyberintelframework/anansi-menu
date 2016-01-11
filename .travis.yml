@@ -16,6 +16,9 @@ script:
   - nosetests
 after_success:
   - dpkg-buildpackage
+before_deploy: 
+  - ls ../*.deb
+  - ls ..
 deploy:
   provider: bintray
   file: descriptor.json
