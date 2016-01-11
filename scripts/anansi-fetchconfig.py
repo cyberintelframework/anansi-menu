@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import os
 import logging
-from anansi_menu.actions.debian import fetch_openvpn_config
 from anansi_menu.actions import get_config, fetch_openvpn_config
 
 logger = logging.getLogger(__name__)
