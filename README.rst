@@ -22,6 +22,13 @@ Installation
 
     $ pip install .
 
+debian package::
+
+    # echo "deb https://dl.bintray.com/anansi/anansi stable main" > /etc/apt/sources.list.d/anansi.list
+    # apt-key adv --keyserver hkps.pool.sks-keyservers.net --recv-keys 7B515ADA
+    # apt-get update
+    # apt-get install python-anansi-menu
+
 
 Customization
 -------------
