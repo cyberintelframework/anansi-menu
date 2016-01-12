@@ -1,12 +1,12 @@
 {
     "package": {
         "name": "anansi-menu",
-        "repo": "anansi",
+        "repo": "anansi-menu-test",
         "subject": "anansi"
     },
 
     "version": {
-        "name": "0.12",
+        "name": "0.14",
         "gpgSign": true
     },
     "files":
