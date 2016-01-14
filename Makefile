@@ -7,6 +7,9 @@ all: build run
 build:
 	docker build -t ${DOCKER_REPO} .
 
+testrepo:
+	docker build -f testrepo.docker -t anansi/repo .
+
 run:
 	docker run -ti \
 		-e SENSOR_URL=${SENSOR_URL} \

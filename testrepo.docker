@@ -1,0 +1,12 @@
+FROM debian:jessie
+
+MAINTAINER gijsmolenaar@gmail.com
+
+RUN apt-key adv --keyserver hkps.pool.sks-keyservers.net --recv-keys 7B515ADA
+
+RUN apt-get update && apt-get install -y apt-transport-https && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN echo "deb https://dl.bintray.com/anansi/anansi stable main" > /etc/apt/sources.list.d/anansi.list
+
+RUN apt-get update && apt-get install -y python-anansi-menu && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
